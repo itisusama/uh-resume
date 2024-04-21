@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Fact</title>
+</head>
+<body>
+    <h1 id="catFact">Loading...</h1>
+
+    <script>
+        // Fetch the cat fact from the API
+        fetch('https://catfact.ninja/fact')
+            .then(response => response.json()) // Parse the JSON response
+            .then(data => {
+                const catFact = data.fact; // Extract the fact from the response data
+                document.getElementById('catFact').textContent = catFact; // Set the fact as the text content of the <h1> element
+            })
+            .catch(error => {
+                console.error('Error fetching cat fact:', error);
+                document.getElementById('catFact').textContent = 'Failed to fetch cat fact'; // Display an error message if fetching fails
+            });
+    </script>
+</body>
+</html>
