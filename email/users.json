@@ -1,0 +1,17 @@
+{
+    "accounts": [
+      {
+        "username": "sunny123",
+        "password": "p@ssw0rd123"
+      },
+      {
+        "username": "bluebird92",
+        "password": "securePass789"
+      },
+      {
+        "username": "sparkle99",
+        "password": "rainbow!456"
+      }
+    ]
+  }
+  
