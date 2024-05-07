@@ -3,58 +3,81 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f2f2f2;
-  }
-  
-  .container {
-    max-width: 800px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1200px;
     margin: 50px auto;
-    padding: 20px;
+}
+
+.grid-item {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  h1, h2 {
+    padding: 20px;
+}
+
+h1, h2 {
     color: #333;
-  }
-  
-  h1 {
+}
+
+h1 {
     font-size: 32px;
     margin-bottom: 20px;
     text-align: center;
-  }
-  
-  h2 {
+    color: #f60000;
+}
+
+h2 {
     font-size: 24px;
     margin-top: 30px;
     margin-bottom: 10px;
-  }
-  
-  p {
+    color: #555;
+}
+
+p {
     margin: 0 0 15px;
     line-height: 1.6;
-  }
-  
-  ul {
+    color: #444;
+}
+
+ul {
     list-style: none;
     padding: 0;
     margin: 0;
-  }
-  
-  li {
+}
+
+li {
     margin-bottom: 8px;
-  }
-  
-  a {
+}
+
+a {
     text-decoration: none;
-    color: #007bff;
-  }
-  
-  a:hover {
+    color: #f60000;
+}
+
+a:hover {
     text-decoration: underline;
-    color: #0056b3;
-  }
-  
+    color: #c00000;
+}
+
+/* Custom bullet point */
+li::before {
+    content: '\2022'; /* Bullet point Unicode character */
+    position: absolute;
+    left: -15px;
+    color: #f60000; /* Color of the bullet point */
+    font-size: 18px;
+}
+
+/* Add some spacing between bullet and text */
+li {
+    padding-left: 25px;
+}
+
 /* Add this CSS to your existing stylesheet */
 ul {
     list-style: none;
@@ -74,27 +97,26 @@ ul {
     content: '\2022'; /* Bullet point Unicode character */
     position: absolute;
     left: 0;
-    color: #007bff; /* Color of the bullet point */
+    color: #f60000; /* Color of the bullet point */
     font-size: 14px;
   }
 
-  @media screen and (max-width: 600px) {
-    .container {
-      max-width: 100%;
-      margin: 20px;
-      padding: 10px;
+@media screen and (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 10px;
     }
-  
+
     h1 {
-      font-size: 24px;
+        font-size: 28px;
     }
-  
+
     h2 {
-      font-size: 20px;
+        font-size: 24px;
     }
-  
+
     p {
-      font-size: 16px;
+        font-size: 16px;
     }
-  }
-  
+}
