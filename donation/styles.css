@@ -116,3 +116,7 @@ button:focus {
     outline: 2px solid #0056b3;
     outline-offset: 2px;
 }
+
+.jazz{
+    width: 300px;
+}
